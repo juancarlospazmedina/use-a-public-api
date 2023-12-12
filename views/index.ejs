@@ -1,0 +1,42 @@
+<%- include("partials/header.ejs") %>
+
+
+<div class="container">
+
+
+  <div class="row">
+
+
+    <div class="col-xs-12 g-3 text-center border border-primary-subtle border-0">
+
+
+
+
+      <div class="card text-center">
+        <div class="card-header">
+          BTC_USDT Price
+        </div>
+        <div class="card-body">
+          <h5 class="card-title"><%= content %></h5>
+
+          <form action="/get-price" method="POST">
+            <div class="mb-3 mt-3">
+              <input class="btn btn-primary" type="submit" value="Click to update price"></button>
+            </div>
+          </form>
+
+        </div>
+        <div class="card-footer text-body-secondary">
+          <%= new Date().toString() %> 
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+</div>
+
+
+<%- include("partials/footer.ejs") %>
